@@ -1,0 +1,114 @@
+name: Sync metadata from Snap.Metadata
+
+# 同步上游 SnapHutaoRemasteringProject/Snap.Metadata 仓库的元数据,
+# 重新计算 XXH64 hash (CRLF 规范化), 写回 Meta.json 并 commit.
+#
+# 触发条件:
+# 1. cron: 每天 UTC 00:00 (北京时间 08:00) 拉取一次
+# 2. workflow_dispatch: 手动触发
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout PaimonsNotebookResources
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install xxhash
+        run: pip install xxhash
+
+      - name: Sparse-checkout Snap.Metadata
+        uses: actions/checkout@v4
+        with:
+          repository: SnapHutaoRemasteringProject/Snap.Metadata
+          path: upstream
+          sparse-checkout: |
+            Genshin/CHS
+            Genshin/CHT
+            Genshin/EN
+            Genshin/JP
+
+      - name: Compute hashes and write Meta.json
+        run: |
+          python3 << 'PYEOF'
+          import json, os, xxhash
+          from pathlib import Path
+
+          REPO_ROOT = Path('.')
+          UPSTREAM = Path('../upstream')
+          LOCALES = ['CHS', 'CHT', 'EN', 'JP']
+
+          for locale in LOCALES:
+              src_dir = UPSTREAM / 'Genshin' / locale
+              dst_dir = REPO_ROOT / 'metadata' / 'Genshin' / locale
+              if not src_dir.exists():
+                  print(f"[skip] {locale}: upstream not found")
+                  continue
+
+              dst_dir.mkdir(parents=True, exist_ok=True)
+
+              # 同步文件
+              for root, dirs, files in os.walk(src_dir):
+                  rel = Path(root).relative_to(src_dir)
+                  for fn in files:
+                      if not fn.endswith('.json') or fn == 'Meta.json':
+                          continue
+                      src = Path(root) / fn
+                      dst = dst_dir / rel / fn
+                      dst.parent.mkdir(parents=True, exist_ok=True)
+                      with open(src, 'rb') as f:
+                          raw = f.read()
+                      with open(dst, 'wb') as f:
+                          f.write(raw)
+
+              # 计算 hash
+              hash_map = {}
+              for root, dirs, files in os.walk(dst_dir):
+                  for fn in sorted(files):
+                      if not fn.endswith('.json') or fn == 'Meta.json':
+                          continue
+                      full = Path(root) / fn
+                      rel = full.relative_to(dst_dir)
+                      with open(full, 'rb') as f:
+                          raw = f.read()
+                      # CRLF 规范化 (兼容 Snap.Hutao.Remastered LegacyMetadataService)
+                      normalized = raw.replace(b'\r\n', b'\n').replace(b'\n', b'\r\n')
+                      h = xxhash.xxh64(normalized).hexdigest().upper()
+                      hash_map[rel.as_posix()[:-5]] = h
+
+              sorted_map = dict(sorted(hash_map.items()))
+              meta_path = dst_dir / 'Meta.json'
+              with open(meta_path, 'w', encoding='utf-8', newline='') as f:
+                  json.dump(sorted_map, f, ensure_ascii=False, indent=2)
+              print(f"[{locale}] {len(sorted_map)} files hashed, Meta.json written")
+          PYEOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet HEAD -- metadata/; then
+            echo "无变化, 跳过 commit"
+            exit 0
+          fi
+          git add metadata/
+          git commit -m "chore(metadata): sync from Snap.Metadata ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+          git push origin main
