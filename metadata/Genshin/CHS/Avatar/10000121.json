@@ -635,7 +635,7 @@
         },
         "Id": 1212101,
         "Name": "模块式高效运作",
-        "Description": "依据队伍的<color=#FFD780FF>月兆</color>，爱诺将获得对应的强化效果。\n\n<color=#FFD780FF>月兆·满辉</color>：元素爆发<color=#FFD780FF>{LINK#S11215}精密水冷仪{/LINK}</color>将获得强化：<color=#FFD780FF>「冷静一下鸭」</color>将以更短的间隔发射水弹，造成范围更大的<color=#80C0FFFF>水元素范围伤害</color>。",
+        "Description": "依据队伍的<color=#FFD780FF>月兆</color>，爱诺将获得对应的强化效果。\n\n<color=#FFD780FF>月兆·满辉</color>：元素爆发<color=#FFD780FF>精密水冷仪</color>将获得强化：<color=#FFD780FF>「冷静一下鸭」</color>将以更短的间隔发射水弹，造成范围更大的<color=#80C0FFFF>水元素范围伤害</color>。",
         "Icon": "UI_Talent_S_Aino_05"
       },
       {
@@ -699,19 +699,19 @@
       {
         "Id": 1211,
         "Name": "灰与力场的平衡理论",
-        "Description": "爱诺施放元素战技<color=#FFD780FF>{LINK#S11212}妙思捕手{/LINK}</color>或元素爆发<color=#FFD780FF>{LINK#S11215}精密水冷仪{/LINK}</color>后，爱诺自身的元素精通提升80点，附近的当前场上其他角色的元素精通提升80点，持续15秒。\n\n该命之座提供的元素精通提升效果无法叠加。",
+        "Description": "爱诺施放元素战技<color=#FFD780FF>妙思捕手</color>或元素爆发<color=#FFD780FF>精密水冷仪</color>后，爱诺自身的元素精通提升80点，附近的当前场上其他角色的元素精通提升80点，持续15秒。\n\n该命之座提供的元素精通提升效果无法叠加。",
         "Icon": "UI_Talent_S_Aino_03"
       },
       {
         "Id": 1212,
         "Name": "齿轮差分的进位原理",
-        "Description": "元素爆发<color=#FFD780FF>{LINK#S11215}精密水冷仪{/LINK}</color>中的<color=#FFD780FF>对点水冷域</color>持续期间，若爱诺处于队伍后台，队伍中自己的当前场上角色的攻击命中附近的敌人时，<color=#FFD780FF>「冷静一下鸭」</color>将对该敌人发射一枚额外的水弹，基于爱诺攻击力的25%与元素精通的100%，造成<color=#80C0FFFF>水元素范围伤害</color>。该效果每5秒至多触发一次，且造成的伤害视为元素爆发伤害。",
+        "Description": "元素爆发<color=#FFD780FF>精密水冷仪</color>中的<color=#FFD780FF>对点水冷域</color>持续期间，若爱诺处于队伍后台，队伍中自己的当前场上角色的攻击命中附近的敌人时，<color=#FFD780FF>「冷静一下鸭」</color>将对该敌人发射一枚额外的水弹，基于爱诺攻击力的25%与元素精通的100%，造成<color=#80C0FFFF>水元素范围伤害</color>。该效果每5秒至多触发一次，且造成的伤害视为元素爆发伤害。",
         "Icon": "UI_Talent_S_Aino_02"
       },
       {
         "Id": 1213,
         "Name": "蛋糕与机关维修艺术",
-        "Description": "元素爆发<color=#FFD780FF>{LINK#S11215}精密水冷仪{/LINK}</color>的技能等级提高3级。\n至多提升至15级。",
+        "Description": "元素爆发<color=#FFD780FF>精密水冷仪</color>的技能等级提高3级。\n至多提升至15级。",
         "Icon": "UI_Talent_U_Aino_01",
         "ExtraLevel": {
           "Index": 9,
@@ -721,13 +721,13 @@
       {
         "Id": 1214,
         "Name": "黄油与猫与供能法则",
-        "Description": "元素战技<color=#FFD780FF>{LINK#S11212}妙思捕手{/LINK}</color>命中敌人时，将为爱诺恢复10点元素能量，每10秒至多通过这种方式恢复一次元素能量。",
+        "Description": "元素战技<color=#FFD780FF>妙思捕手</color>命中敌人时，将为爱诺恢复10点元素能量，每10秒至多通过这种方式恢复一次元素能量。",
         "Icon": "UI_Talent_S_Aino_01"
       },
       {
         "Id": 1215,
         "Name": "金属与光的不朽涡轮",
-        "Description": "元素战技<color=#FFD780FF>{LINK#S11212}妙思捕手{/LINK}</color>的技能等级提高3级。\n至多提升至15级。",
+        "Description": "元素战技<color=#FFD780FF>妙思捕手</color>的技能等级提高3级。\n至多提升至15级。",
         "Icon": "UI_Talent_U_Aino_02",
         "ExtraLevel": {
           "Index": 2,
@@ -737,7 +737,7 @@
       {
         "Id": 1216,
         "Name": "天才之为构造之责任",
-        "Description": "施放元素爆发<color=#FFD780FF>{LINK#S11215}精密水冷仪{/LINK}</color>后的15秒内，附近的当前场上角色触发的感电、绽放、月感电、月绽放、月结晶造成的伤害提升15%。\n<color=#FFD780FF>月兆·满辉</color>：上述反应造成的伤害额外提升20%。",
+        "Description": "施放元素爆发<color=#FFD780FF>精密水冷仪</color>后的15秒内，附近的当前场上角色触发的感电、绽放、月感电、月绽放、月结晶造成的伤害提升15%。\n<color=#FFD780FF>月兆·满辉</color>：上述反应造成的伤害额外提升20%。",
         "Icon": "UI_Talent_S_Aino_04"
       }
     ]

@@ -444,7 +444,7 @@
         },
         "Id": 11302,
         "Name": "对策·露米呀吼吼！",
-        "Description": "和露米一起冒险！依据不同的点按方式，露米将会以不同的形态出击。\n\n<color=#FFD780FF>点按</color>\n露米将会以<color=#FFD780FF>{LINK#N11300001}超厉害形态{/LINK}</color>出击，不断攻击附近的敌人，造成<color=#FFE699FF>岩元素范围伤害</color>；若附近存在月笼，露米还会对附近的敌人造成视为月结晶反应伤害的<color=#FFE699FF>岩元素范围伤害</color>。\n\n<color=#FFD780FF>连续点按</color>\n该拿出超厉害的真本事啦！使用元素战技后，连续点按元素战技或普通攻击，莉奈娅将会向露米投喂亮晶晶的宝石，吃得饱饱的露米会以<color=#FFD780FF>{LINK#N11300001}究极厉害形态{/LINK}</color>出击，对附近的敌人造成一次格外强力的、视为月结晶反应伤害的<color=#FFE699FF>岩元素范围伤害</color>，并切换至<color=#FFD780FF>{LINK#N11300001}普通厉害形态{/LINK}</color>。\n此外，连续点按元素战技时，提高莉奈娅的抗打断能力。\n\n<i>「就交给你了，露米！」</i>",
+        "Description": "和露米一起冒险！依据不同的点按方式，露米将会以不同的形态出击。\n\n<color=#FFD780FF>点按</color>\n露米将会以<color=#FFD780FF>超厉害形态</color>出击，不断攻击附近的敌人，造成<color=#FFE699FF>岩元素范围伤害</color>；若附近存在月笼，露米还会对附近的敌人造成视为月结晶反应伤害的<color=#FFE699FF>岩元素范围伤害</color>。\n\n<color=#FFD780FF>连续点按</color>\n该拿出超厉害的真本事啦！使用元素战技后，连续点按元素战技或普通攻击，莉奈娅将会向露米投喂亮晶晶的宝石，吃得饱饱的露米会以<color=#FFD780FF>究极厉害形态</color>出击，对附近的敌人造成一次格外强力的、视为月结晶反应伤害的<color=#FFE699FF>岩元素范围伤害</color>，并切换至<color=#FFD780FF>普通厉害形态</color>。\n此外，连续点按元素战技时，提高莉奈娅的抗打断能力。\n\n<i>「就交给你了，露米！」</i>",
         "Icon": "Skill_S_Linnea_01"
       }
     ],
@@ -659,7 +659,7 @@
       },
       "Id": 11305,
       "Name": "备忘·绝境生存指南",
-      "Description": "就算是大师级的冒险家，也需要适度的休息！莉奈娅呼唤露米以<color=#FFD780FF>{LINK#N11300001}超厉害形态{/LINK}</color>出击，为附近的队伍中所有角色恢复生命值，并在接下来的一段时间内，持续为附近的当前场上角色恢复生命值，回复量受益于莉奈娅的防御力。\n若施放元素爆发时，露米已经出击，则改为重置露米的持续时间，并不会改变露米的出击形态。\n\n<i>「对于专业的冒险家来说，比起前所未有的发现，在绝境中全身而退才是最高法则！」</i>",
+      "Description": "就算是大师级的冒险家，也需要适度的休息！莉奈娅呼唤露米以<color=#FFD780FF>超厉害形态</color>出击，为附近的队伍中所有角色恢复生命值，并在接下来的一段时间内，持续为附近的当前场上角色恢复生命值，回复量受益于莉奈娅的防御力。\n若施放元素爆发时，露米已经出击，则改为重置露米的持续时间，并不会改变露米的出击形态。\n\n<i>「对于专业的冒险家来说，比起前所未有的发现，在绝境中全身而退才是最高法则！」</i>",
       "Icon": "Skill_E_Linnea_01"
     },
     "Inherents": [
@@ -681,7 +681,7 @@
         },
         "Id": 1302101,
         "Name": "野外观察手记",
-        "Description": "露米在场上时，露米附近敌人的<color=#FFE699FF>岩元素抗性</color>会降低15%。\n\n<color=#FFD780FF>月兆·满辉</color>：莉奈娅的元素战技<color=#FFD780FF>{LINK#S11302}对策·露米呀吼吼！{/LINK}</color>和元素爆发<color=#FFD780FF>{LINK#S11305}备忘·绝境生存指南{/LINK}</color>获得强化，呼唤露米上场后，露米附近敌人的<color=#FFE699FF>岩元素抗性</color>还会进一步降低15%。",
+        "Description": "露米在场上时，露米附近敌人的<color=#FFE699FF>岩元素抗性</color>会降低15%。\n\n<color=#FFD780FF>月兆·满辉</color>：莉奈娅的元素战技<color=#FFD780FF>对策·露米呀吼吼！</color>和元素爆发<color=#FFD780FF>备忘·绝境生存指南</color>获得强化，呼唤露米上场后，露米附近敌人的<color=#FFE699FF>岩元素抗性</color>还会进一步降低15%。",
         "Icon": "UI_Talent_S_Linnea_05"
       },
       {
@@ -750,19 +750,19 @@
       {
         "Id": 1301,
         "Name": "未完成的分类",
-        "Description": "施放元素战技<color=#FFD780FF>{LINK#S11302}对策·露米呀吼吼！{/LINK}</color>时，或触发月笼谐奏时，莉奈娅将获得6层<color=#FFD780FF>「历览编录」</color>效果，该效果持续10秒，至多叠加18层。队伍中附近的角色造成月结晶反应伤害时，将消耗一层「历览编录」，提升造成的伤害，提升值相当于莉奈娅防御力的75%。\n此外，露米在<color=#FFD780FF>{LINK#N11300001}究极厉害形态{/LINK}</color>下使用<color=#FFD780FF>百万吨重锤</color>时，莉奈娅可以消耗至多5层「历览编录」，每层都会使造成的伤害提升，提升值相当于莉奈娅防御力的150%。",
+        "Description": "施放元素战技<color=#FFD780FF>对策·露米呀吼吼！</color>时，或触发月笼谐奏时，莉奈娅将获得6层<color=#FFD780FF>「历览编录」</color>效果，该效果持续10秒，至多叠加18层。队伍中附近的角色造成月结晶反应伤害时，将消耗一层「历览编录」，提升造成的伤害，提升值相当于莉奈娅防御力的75%。\n此外，露米在<color=#FFD780FF>究极厉害形态</color>下使用<color=#FFD780FF>百万吨重锤</color>时，莉奈娅可以消耗至多5层「历览编录」，每层都会使造成的伤害提升，提升值相当于莉奈娅防御力的150%。",
         "Icon": "UI_Talent_S_Linnea_01"
       },
       {
         "Id": 1302,
         "Name": "喜或悲的谕告",
-        "Description": "触发月笼谐奏后的8秒内，队伍中所有元素类型为<color=#80C0FFFF>水元素</color>与<color=#FFE699FF>岩元素</color>的角色的暴击伤害提升40%，且露米在<color=#FFD780FF>{LINK#N11300001}究极厉害形态{/LINK}</color>下使用<color=#FFD780FF>百万吨重锤</color>的暴击伤害额外提升150%。\n\n<color=#FFD780FF>月兆·满辉</color>：露米在<color=#FFD780FF>{LINK#N11300001}超厉害形态{/LINK}</color>下使用<color=#FFD780FF>加力重锤</color>时，或在究极厉害形态下使用<color=#FFD780FF>百万吨重锤</color>时，会触发一次月笼谐奏，且本次月笼谐奏视为队伍中所有元素类型为<color=#80C0FFFF>水元素</color>与<color=#FFE699FF>岩元素</color>的角色均在反应中施加了元素。",
+        "Description": "触发月笼谐奏后的8秒内，队伍中所有元素类型为<color=#80C0FFFF>水元素</color>与<color=#FFE699FF>岩元素</color>的角色的暴击伤害提升40%，且露米在<color=#FFD780FF>究极厉害形态</color>下使用<color=#FFD780FF>百万吨重锤</color>的暴击伤害额外提升150%。\n\n<color=#FFD780FF>月兆·满辉</color>：露米在<color=#FFD780FF>超厉害形态</color>下使用<color=#FFD780FF>加力重锤</color>时，或在究极厉害形态下使用<color=#FFD780FF>百万吨重锤</color>时，会触发一次月笼谐奏，且本次月笼谐奏视为队伍中所有元素类型为<color=#80C0FFFF>水元素</color>与<color=#FFE699FF>岩元素</color>的角色均在反应中施加了元素。",
         "Icon": "UI_Talent_S_Linnea_02"
       },
       {
         "Id": 1303,
         "Name": "热闹的记录页",
-        "Description": "元素战技<color=#FFD780FF>{LINK#S11302}对策·露米呀吼吼！{/LINK}</color>的技能等级提高3级。\n至多提升至15级。",
+        "Description": "元素战技<color=#FFD780FF>对策·露米呀吼吼！</color>的技能等级提高3级。\n至多提升至15级。",
         "Icon": "UI_Talent_U_Linnea_01",
         "ExtraLevel": {
           "Index": 2,
@@ -778,7 +778,7 @@
       {
         "Id": 1305,
         "Name": "仙乡的赠别礼",
-        "Description": "元素爆发<color=#FFD780FF>{LINK#S11305}备忘·绝境生存指南{/LINK}</color>的技能等级提高3级。\n至多提升至15级。",
+        "Description": "元素爆发<color=#FFD780FF>备忘·绝境生存指南</color>的技能等级提高3级。\n至多提升至15级。",
         "Icon": "UI_Talent_U_Linnea_02",
         "ExtraLevel": {
           "Index": 9,
@@ -788,7 +788,7 @@
       {
         "Id": 1306,
         "Name": "黄金猎犬之梦",
-        "Description": "命之座<color=#FFD780FF>「未完成的分类」</color>的效果获得强化：施放元素战技<color=#FFD780FF>{LINK#S11302}对策·露米呀吼吼！{/LINK}</color>时，或触发月笼谐奏时，莉奈娅将直接获得最大层数的<color=#FFD780FF>「历览编录」</color>效果；消耗<color=#FFD780FF>「历览编录」</color>时，将消耗原本2倍的层数，并使伤害提升效果提高至原本的150%。\n\n<color=#FFD780FF>月兆·满辉</color>：队伍中附近的角色造成的月结晶反应伤害{LINK#N11190007}<color=#FFD780FF>擢升</color>{/LINK}25%。",
+        "Description": "命之座<color=#FFD780FF>「未完成的分类」</color>的效果获得强化：施放元素战技<color=#FFD780FF>对策·露米呀吼吼！</color>时，或触发月笼谐奏时，莉奈娅将直接获得最大层数的<color=#FFD780FF>「历览编录」</color>效果；消耗<color=#FFD780FF>「历览编录」</color>时，将消耗原本2倍的层数，并使伤害提升效果提高至原本的150%。\n\n<color=#FFD780FF>月兆·满辉</color>：队伍中附近的角色造成的月结晶反应伤害<color=#FFD780FF>擢升</color>25%。",
         "Icon": "UI_Talent_S_Linnea_04"
       }
     ]
