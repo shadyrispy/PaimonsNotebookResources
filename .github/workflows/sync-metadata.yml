@@ -65,6 +65,8 @@ jobs:
 
               dst_dir.mkdir(parents=True, exist_ok=True)
 
+              import re
+
               # 同步文件
               for root, dirs, files in os.walk(src_dir):
                   rel = Path(root).relative_to(src_dir)
@@ -74,10 +76,13 @@ jobs:
                       src = Path(root) / fn
                       dst = dst_dir / rel / fn
                       dst.parent.mkdir(parents=True, exist_ok=True)
-                      with open(src, 'rb') as f:
-                          raw = f.read()
-                      with open(dst, 'wb') as f:
-                          f.write(raw)
+                      with open(src, 'r', encoding='utf-8') as f:
+                          content = f.read()
+                      # 移除 LINK 标签，保留 color 等内部标签
+                      content = re.sub(r'\{LINK#.*?\}', '', content)
+                      content = re.sub(r'\{/LINK\}', '', content)
+                      with open(dst, 'w', encoding='utf-8', newline='\n') as f:
+                          f.write(content)
 
               # 计算 hash
               hash_map = {}
